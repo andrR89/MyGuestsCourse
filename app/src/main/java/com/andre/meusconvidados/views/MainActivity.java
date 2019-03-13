@@ -15,18 +15,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andre.meusconvidados.R;
+import com.crashlytics.android.Crashlytics;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -89,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Crashlytics.getInstance().crash();
             return true;
         }
 
@@ -103,14 +110,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Class fragmentClass = null;
 
         int id = item.getItemId();
-
+        // Logando no Firebase ações...
         if (id == R.id.nav_all_guests) {
-            // Handle the camera action
             fragmentClass = AllInvitedFragment.class;
+            // Evento padrão
+            Bundle bundle = new Bundle();
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "all_invited_id");
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "all_invited");
+            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "menu_click");
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+            // Evento Customizado
+            bundle = new Bundle();
+            bundle.putString("menu_content", "all_invited");
+            mFirebaseAnalytics.logEvent("menu_content_custom", bundle);
         } else if (id == R.id.nav_present) {
             fragmentClass = PresentFragment.class;
+            Bundle bundle = new Bundle();
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "present_id");
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "present");
+            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "menu_click");
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+            // Evento Customizado
+            bundle = new Bundle();
+            bundle.putString("menu_content", "present");
+            mFirebaseAnalytics.logEvent("menu_content_custom", bundle);
         } else if (id == R.id.nav_absent) {
             fragmentClass = AbsentFragment.class;
+            Bundle bundle = new Bundle();
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "absent_id");
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "absent");
+            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "menu_click");
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+            // Evento Customizado
+            bundle = new Bundle();
+            bundle.putString("menu_content", "absent");
+            mFirebaseAnalytics.logEvent("menu_content_custom", bundle);
         } else{
 
         }

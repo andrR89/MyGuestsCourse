@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "5782481241",
+    "firebase_url": "https://myguests-8b08b.firebaseio.com",
+    "project_id": "myguests-8b08b",
+    "storage_bucket": "myguests-8b08b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5782481241:android:44641c7606a053d6",
+        "android_client_info": {
+          "package_name": "com.andre.meusconvidados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5782481241-bie2s9qnjbaqn73vkt4ed837giqede6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4q3TqXRsxaOfO2vo_kfPs8quccwQxCOk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

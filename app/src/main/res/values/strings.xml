@@ -29,4 +29,5 @@
     <string name="documento">Documento</string>
     <string name="gerenciamento_de_convidados">Gerenciamento de convidados</string>
     <string name="confirma_o">Confirmação</string>
+    <string name="crash_app">Crash App!</string>
 </resources>
