@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MeusConvidados</string>
+    <string name="navigation_drawer_open">Abrir Menu</string>
+    <string name="navigation_drawer_close">Fechar Menu</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="ausentes">Ausentes</string>
+    <string name="presentes">Presentes</string>
+    <string name="todos">Todos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome">Nome</string>
+    <string name="ausente">Ausente</string>
+    <string name="presente">Presente</string>
+    <string name="nao_confirmado">Não Confirmado</string>
+    <string name="salvar">Salvar</string>
+    <string name="nome_obrigatorio">Nome é obrigatório</string>
+    <string name="convidado_salvo">Convidado salvo com sucesso</string>
+    <string name="erro_salvar_convidado">Erro ao Salvar convidado</string>
+    <string name="remover_convidado">Remover convidado</string>
+    <string name="question_remove_convidoda">Deseja remover o convidado?</string>
+    <string name="nao">Não</string>
+    <string name="sim">Sim</string>
+    <string name="total">Total</string>
+    <string name="convidado_removido">Convidado removido com sucesso</string>
+    <string name="documento">Documento</string>
+    <string name="gerenciamento_de_convidados">Gerenciamento de convidados</string>
+    <string name="confirma_o">Confirmação</string>
+</resources>

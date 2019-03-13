@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFb05c</color>
+    <color name="colorPrimaryDark">#fa9f3d</color>
+    <color name="colorAccent">#b2d76c</color>
+
+    <color name="colorPrimaryText">#42784b</color>
+    <color name="colorPrimaryPresent">#6ac279</color>
+    <color name="colorPrimaryAbsent">#ff724b</color>
+    <color name="colorPrimaryTotal">#7cddce</color>
+    <color name="colorPrimaryButton">#FFFFFF</color>
+    <color name="color_grandient_start">#81c784</color>
+    <color name="color_gradient_test">#81C784</color>
+</resources>
